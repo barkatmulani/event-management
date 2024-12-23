@@ -16,7 +16,8 @@ export default function ListEvents({events}: Props) {
 
     const search = (val: string) => {
         setKeyword(val);
-        const newEvents = events.filter(e => e.name.indexOf(keyword) >= 0 || e.description.indexOf(keyword) >= 0);
+        const kw = val.toLowerCase();
+        const newEvents = events.filter(e => (e.name.toLowerCase().indexOf(kw) >= 0) || (e.description.toLowerCase().indexOf(kw) >= 0));
         setFilteredEvents(newEvents);
     };
 
