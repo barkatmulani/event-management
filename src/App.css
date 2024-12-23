@@ -1,0 +1,21 @@
+div.app {
+    form .form-control {
+        @apply mb-2 flex flex-row;
+        
+        label {
+            @apply inline-block w-32 p-1 text-left;
+        }
+    }
+
+    button {
+        @apply bg-blue-500 text-white px-3 py-2 font-bold text-sm rounded-lg;
+
+        &.clear {
+            @apply bg-neutral-600;
+        }
+    }
+    
+    input {
+        @apply inline-block border-2 p-1;
+    }
+}
